@@ -65,20 +65,20 @@ export const evaluate = (symbol, prev) => {
  */
 const getRandomNumber = range => {
     let eq ;
-    let min = 1
+    let min = 10
     if(sessionData.dif == null || sessionData.dif == "b"){
-        range = 5
-        min = 1
-        eq = ((Math.random() * (range - min)) + 1 ).toFixed()
-    }
-    else if( sessionData.dif == "i"){
         range = 20
         min = 10
         eq = ((Math.random() * (range - min)) + min ).toFixed()
     }
+    else if( sessionData.dif == "i"){
+        range =40 
+        min = 20
+        eq = ((Math.random() * (range - min)) + min ).toFixed()
+    }
     else if (sessionData.dif == "m"){
-        range = 30
-        min = 15
+        range = 65
+        min = 35
         eq = ((Math.random() * (range - min)) + min ).toFixed()
     }
     return eq

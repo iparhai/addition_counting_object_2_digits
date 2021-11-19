@@ -164,14 +164,14 @@ class Quiz extends React.Component {
             this.state.modal
           ) : (
             <div>
-              {sessionData.dif != "b" ?
-                <div>
-                  <h1 style={{ fontSize: "3.5em" }}> {this.state.problem} </h1>
-                  <DifficultDrag handleAnswer={this.evaluateProblem} answer={this.state.answer} incCount={(number) => { this.setState({ answer: this.state.answer + number }) }} decCount={(number) => { this.setState({ answer: this.state.answer - number }) }} count={this.state.answer} img={this.state.randomImage} />
-                </div> :
-                <div>
 
-                  {/* <div className="objectRow" style={{ width: "100%", marginTop : "5vh"}}>
+              <div>
+                <h1 style={{ fontSize: "3.5em" }}> {this.state.problem} </h1>
+                <DifficultDrag handleAnswer={this.evaluateProblem} answer={this.state.answer} incCount={(number) => { this.setState({ answer: this.state.answer + number }) }} decCount={(number) => { this.setState({ answer: this.state.answer - number }) }} count={this.state.answer} img={this.state.randomImage} />
+              </div>
+
+
+              {/* <div className="objectRow" style={{ width: "100%", marginTop : "5vh"}}>
                     <div className="objectLeft">
                       {[...Array(parseInt(this.state.firstNumber))].map((e, i) => {
                         return <img key={i} src={this.state.randomImage} className="questionImage " draggable="false" />
@@ -184,10 +184,8 @@ class Quiz extends React.Component {
                       })}
                     </div>
                   </div> */}
-                  <h1 style={{ fontSize: "3.5em" }}> {this.state.problem} </h1>
-                  <Drop handleAnswer={this.evaluateProblem} answer={this.state.answer} incCount={(number) => { this.setState({ answer: this.state.answer + number }) }} decCount={(number) => { this.setState({ answer: this.state.answer - number }) }} count={this.state.answer} img={this.state.randomImage} />
-                </div>
-              }
+
+
             </div>
           )}
         </div>
